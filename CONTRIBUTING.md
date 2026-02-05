@@ -22,7 +22,29 @@ Thank you for considering contributing to the upcdatabase library! Here's how yo
    pip install -e ".[dev]"
    ```
 
+5. **Install pre-commit hooks**:
+   ```bash
+   pip install pre-commit
+   pre-commit install
+   ```
+
 ## Development Workflow
+
+### Pre-commit Hooks
+
+Once installed, pre-commit hooks automatically run on every commit to catch issues early:
+- **Format code** with Black
+- **Sort imports** with isort
+- **Lint code** with Pylint (errors and failures only)
+- **Type check** with mypy
+- **Fix file issues** (trailing whitespace, end-of-file, etc.)
+
+If any checks fail, the commit will be blocked. Fix the issues and try committing again.
+
+To skip hooks temporarily (not recommended):
+```bash
+git commit --no-verify
+```
 
 ### Running Tests
 
@@ -102,7 +124,7 @@ mypy src/upcdatabase/
   - Clear description of the issue
   - Steps to reproduce
   - Expected vs actual behavior
-  
+
 - **Have a suggestion?** Open a discussion or feature request
 
 ## License

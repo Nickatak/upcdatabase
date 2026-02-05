@@ -83,7 +83,7 @@ from upcdatabase import UPCDatabase, UPCDatabaseError
 def main():
     api_key = "your_api_key_here"
     client = UPCDatabase(api_key=api_key)
-    
+
     # Look up a specific product
     try:
         upc = "036000291204"
@@ -93,7 +93,7 @@ def main():
         print(f"Manufacturer: {product['manufacturer']}")
     except UPCDatabaseError as e:
         print(f"Error: {e}")
-    
+
     # Search for products
     try:
         results = client.search("pepsi", limit=5)

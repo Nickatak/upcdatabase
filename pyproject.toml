@@ -42,6 +42,7 @@ dev = [
     "black>=21.0",
     "isort>=5.0.0",
     "mypy>=0.900",
+    "pre-commit>=2.20.0",
 ]
 
 [tool.setuptools.packages.find]
