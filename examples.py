@@ -6,7 +6,7 @@ from upcdatabase import UPCDatabase, UPCDatabaseError
 def example_lookup():
     """Example: Look up a product by UPC"""
     client = UPCDatabase(api_key="your_api_key_here")
-    
+
     try:
         # Look up a common product
         product = client.lookup("036000291204")
@@ -23,7 +23,7 @@ def example_lookup():
 def example_search():
     """Example: Search for products"""
     client = UPCDatabase(api_key="your_api_key_here")
-    
+
     try:
         results = client.search("coca cola", limit=5)
         print("=== Search Results ===")
@@ -37,7 +37,7 @@ def example_search():
 def example_currency():
     """Example: Get currency data"""
     client = UPCDatabase(api_key="your_api_key_here")
-    
+
     try:
         print("=== Latest Currency Rates ===")
         rates = client.get_latest_currency()
@@ -50,7 +50,7 @@ def example_currency():
 def example_bitcoin():
     """Example: Get Bitcoin data"""
     client = UPCDatabase(api_key="your_api_key_here")
-    
+
     try:
         print("=== Latest Bitcoin Rate ===")
         btc = client.get_latest_bitcoin()
@@ -63,7 +63,7 @@ def example_bitcoin():
 def example_qr_code():
     """Example: Generate a QR code"""
     client = UPCDatabase(api_key="your_api_key_here")
-    
+
     try:
         print("=== QR Code Generation ===")
         qr = client.generate_qr("https://example.com")
@@ -76,7 +76,7 @@ def example_qr_code():
 def example_account():
     """Example: Get account information"""
     client = UPCDatabase(api_key="your_api_key_here")
-    
+
     try:
         print("=== Account Information ===")
         account = client.get_account_info()
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     print("Get your key from: https://upcdatabase.org/apikeys")
     print("=" * 50)
     print()
-    
+
     # Uncomment the examples you want to run:
     # example_lookup()
     # example_search()
