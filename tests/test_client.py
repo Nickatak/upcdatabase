@@ -75,8 +75,8 @@ class TestUPCDatabase(unittest.TestCase):
         with UPCDatabase(api_key="test_key") as client:
             self.assertEqual(client.api_key, "test_key")
 
-    def test_api_key_in_params(self):
-        """Test that API key is added to request params"""
+    def test_api_key_in_bearer_token(self):
+        """Test that API key is added as bearer token in Authorization header"""
         with patch("upcdatabase.client.requests.Session.get") as mock_get:
             mock_response = Mock()
             mock_response.json.return_value = {}
@@ -84,10 +84,10 @@ class TestUPCDatabase(unittest.TestCase):
 
             self.client.lookup("123")
 
-            # Check that the get call includes the API key
+            # Check that the get call includes the bearer token
             call_args = mock_get.call_args
-            self.assertIn("key", call_args[1]["params"])
-            self.assertEqual(call_args[1]["params"]["key"], self.api_key)
+            self.assertIn("headers", call_args[1])
+            self.assertEqual(call_args[1]["headers"]["Authorization"], f"Bearer {self.api_key}")
 
 
 class TestUPCDatabaseError(unittest.TestCase):

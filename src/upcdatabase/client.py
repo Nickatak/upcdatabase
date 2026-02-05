@@ -62,13 +62,14 @@ class UPCDatabase:
         """
         url = f"{self.BASE_URL}{endpoint}"
 
-        # Add API key to params
+        # Add bearer token to headers
+        headers = {"Authorization": f"Bearer {self.api_key}"}
+
         if params is None:
             params = {}
-        params["key"] = self.api_key
 
         try:
-            response = self.session.get(url, params=params, timeout=10)
+            response = self.session.get(url, params=params, headers=headers, timeout=10)
             response.raise_for_status()
             return response.json()
         except requests.exceptions.HTTPError as e:
