@@ -1,0 +1,33 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- Initial release of upcdatabase library
+- Support for product lookup by UPC/EAN
+- Search functionality
+- Currency exchange rate endpoints
+- Bitcoin data endpoints
+- QR code generation
+- Account information endpoints
+
+## [0.1.0] - 2026-02-05
+
+### Added
+- Initial public release
+- Core API client functionality
+- Product lookup endpoint
+- Search endpoint
+- Currency endpoints (latest, history, symbols)
+- Bitcoin endpoints (latest, history)
+- QR code generation
+- Account information endpoint
+- Comprehensive documentation
+- Unit tests with mocking
+- GitHub Actions CI/CD pipeline
+- Example code and usage documentation
