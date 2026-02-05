@@ -30,6 +30,21 @@ Thank you for considering contributing to the upcdatabase library! Here's how yo
 
 ## Development Workflow
 
+### Using Make Commands
+
+The project includes a Makefile with convenient commands for common tasks:
+
+```bash
+make help          # Show all available commands
+make install       # Install package in development mode
+make test          # Run test suite
+make lint          # Run linting checks
+make format        # Format code with black and isort
+make typecheck     # Run type checking with mypy
+make clean         # Remove build artifacts and cache files
+make publish       # Clean, build, and upload to PyPI
+```
+
 ### Pre-commit Hooks
 
 Once installed, pre-commit hooks automatically run on every commit to catch issues early:
@@ -117,6 +132,30 @@ mypy src/upcdatabase/
 - Update README.md if adding features
 - Add docstrings to new methods
 - Include usage examples
+
+## Publishing to PyPI
+
+To publish a new version to PyPI:
+
+1. Copy `.env.example` to `.env` (if not already done):
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Add your PyPI API token to `.env`:
+   ```
+   PYPI_TOKEN=pypi-AgEIcHlwaS5vcmcCJ...
+   ```
+   Get your token from: https://pypi.org/manage/account/tokens/
+
+3. Run the publish command:
+   ```bash
+   make publish
+   ```
+
+This will clean old builds, build the distribution, and upload to PyPI automatically.
+
+For manual steps, see [PUBLISHING.md](PUBLISHING.md).
 
 ## Issues and Discussions
 
