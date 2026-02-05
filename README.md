@@ -19,6 +19,26 @@ Install from PyPI:
 pip install upcdatabase
 ```
 
+## Project Structure
+
+```
+upcdatabase/
+├── src/upcdatabase/
+│   ├── __init__.py          # Package initialization and exports
+│   └── client.py            # Main UPCDatabase API client
+├── tests/
+│   ├── __init__.py
+│   └── test_client.py       # Unit tests (17 tests, 100% coverage)
+├── examples.py              # Usage examples for all endpoints
+├── README.md                # Main documentation
+├── QUICKSTART.md            # Quick start guide
+├── CONTRIBUTING.md          # Contribution guidelines
+├── PUBLISHING.md            # PyPI publishing guide
+├── pyproject.toml           # Project configuration and metadata
+├── .pre-commit-config.yaml  # Pre-commit hooks (linting, formatting, tests)
+└── requirements-dev.txt     # Development dependencies
+```
+
 ## Quick Start
 
 First, you'll need an API key from [UPC Database](https://upcdatabase.org/):

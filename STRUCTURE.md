@@ -76,7 +76,7 @@ upcdatabase/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/upcdatabase.git
+git clone https://github.com/Nickatak/upcdatabase.git
 cd upcdatabase
 
 # Create virtual environment

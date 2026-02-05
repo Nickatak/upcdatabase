@@ -7,7 +7,7 @@ Thank you for considering contributing to the upcdatabase library! Here's how yo
 1. **Fork the repository** on GitHub
 2. **Clone your fork**:
    ```bash
-   git clone https://github.com/yourusername/upcdatabase.git
+   git clone https://github.com/Nickatak/upcdatabase.git
    cd upcdatabase
    ```
 
